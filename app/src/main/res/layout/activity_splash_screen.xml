@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ════════════════════════════════════════════════════════════════════════════
+    SPLASH SCREEN LAYOUT
+    Uses LINEAR LAYOUT as required
+
+    This is the FIRST screen users see when opening the app
+    Shows for 3 seconds with animations, then goes to MainActivity
+    ════════════════════════════════════════════════════════════════════════════
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/my_image_7"
+    android:gravity="center"
+    android:padding="32dp"
+    tools:context="SplashScreen">
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ CHANGEABLE: App Icon/Logo ═══ -->
+    <!-- Change "🎵" to match your app theme -->
+    <!-- Examples: 🎬 (movies), 📚 (books), 🍽️ (restaurants), 💪 (fitness) -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="123dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        app:srcCompat="@drawable/my_image_11" />
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ CHANGEABLE: App Name (Main Title) ═══ -->
+    <!-- Change "MUSIC PLAYLIST" to your app name -->
+    <!-- Examples: "MOVIE TRACKER", "BOOK LIBRARY", "RESTAURANT GUIDE" -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvSplashAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MUSIC PLAYLIST"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#FFDFDF"
+        android:background="#25150C"
+        android:letterSpacing="0.15"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ CHANGEABLE: App Subtitle ═══ -->
+    <!-- Change "MANAGER" to your app subtitle -->
+    <!-- Examples: "TRACKER", "COLLECTION", "REVIEWER", "LOGGER" -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvSplashSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MANAGER"
+        android:textSize="28sp"
+        android:textColor="#FFDFDF"
+        android:letterSpacing="0.2"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Decorative Line -->
+    <View
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:background="#FFFFFF"
+        android:alpha="0.8"
+        android:layout_marginBottom="16dp" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ CHANGEABLE: Tagline/Description ═══ -->
+    <!-- Change to describe your app -->
+    <!-- Examples:
+         - "Track your favorite films"
+         - "Organize your reading list"
+         - "Rate your dining experiences"
+         - "Log your fitness journey"
+    -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <TextView
+        android:id="@+id/tvSplashTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curate your perfect soundtrack"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#25150C"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.05"
+        android:gravity="center"
+        android:layout_marginBottom="64dp" />
+
+    <!-- Spacer (pushes content to center) -->
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ═══ CHANGEABLE: Loading Text ═══ -->
+    <!-- Change "Loading your music..." to match your app -->
+    <!-- Examples:
+         - "Loading your movies..."
+         - "Loading your books..."
+         - "Preparing your reviews..."
+         - "Setting up your tracker..."
+    -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        app:srcCompat="@drawable/my_image_10" />
+
+    <!-- Loading Dots (Horizontal LinearLayout) -->
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Loading your music..."
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+
+    <!-- Version Info (Vertical LinearLayout) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:text="Premium Edition"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="IMAD5112 • ST10495008"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+</LinearLayout>
+
+    <!--
+        ════════════════════════════════════════════════════════════════════════════
+        ASSIGNMENT REQUIREMENT: LINEAR LAYOUT ✓
+        ════════════════════════════════════════════════════════════════════════════
+        This layout uses LinearLayout as required:
+        - Root element: <LinearLayout> with orientation="vertical"
+        - Nested LinearLayouts for grouped elements
+        - Uses gravity and layout_weight for positioning
+        - No ConstraintLayout, RelativeLayout, or other layouts used
+
+        ════════════════════════════════════════════════════════════════════════════
+        QUICK CHANGE REFERENCE FOR DIFFERENT APPS:
+        ════════════════════════════════════════════════════════════════════════════
+
+        FOR MOVIE TRACKER:
+        Line 28: "🎵" → "🎬"
+        Line 43: "MUSIC PLAYLIST" → "MOVIE TRACKER"
+        Line 62: "MANAGER" → "COLLECTION"
+        Line 94: "Curate your perfect soundtrack" → "Track your favorite films"
+        Line 126: "Loading your music..." → "Loading your movies..."
+
+        FOR BOOK LIBRARY:
+        Line 28: "🎵" → "📚"
+        Line 43: "MUSIC PLAYLIST" → "BOOK LIBRARY"
+        Line 62: "MANAGER" → "TRACKER"
+        Line 94: "Curate your perfect soundtrack" → "Organize your reading list"
+        Line 126: "Loading your music..." → "Loading your books..."
+
+        FOR RESTAURANT REVIEWER:
+        Line 28: "🎵" → "🍽️"
+        Line 43: "MUSIC PLAYLIST" → "RESTAURANT"
+        Line 62: "MANAGER" → "REVIEWER"
+        Line 94: "Curate your perfect soundtrack" → "Rate your dining experiences"
+        Line 126: "Loading your music..." → "Loading your reviews..."
+
+        ════════════════════════════════════════════════════════════════════════════
+    -->

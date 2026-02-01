@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ════════════════════════════════════════════════════════════════════════════
+    MAIN SCREEN LAYOUT (Q.1.2)
+    Uses LINEAR LAYOUT as required by assignment
+
+    This screen contains:
+    - Button 1: Add to Playlist (prompts for 4 inputs)
+    - Button 2: View Details (navigates to second screen)
+    - Button 3: Exit App
+    ════════════════════════════════════════════════════════════════════════════
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/my_image_8"
+    android:padding="0dp"
+    tools:context="MainActivity">>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- TOP HEADER SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFDDD"
+        android:alpha="0.9"
+        android:padding="29dp"
+        android:elevation="8dp">
+
+        <!-- ═══ CHANGEABLE: App Icon ═══ -->
+        <!-- Change emoji to match your app theme -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎵"
+            android:textSize="48sp"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- ═══ CHANGEABLE: App Title ═══ -->
+        <!-- Change "MUSIC PLAYLIST" to your app name -->
+        <!-- Examples: "MOVIE TRACKER", "BOOK LIBRARY", "RESTAURANT GUIDE" -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MUSIC PLAYLIST"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- ═══ CHANGEABLE: Subtitle ═══ -->
+        <!-- Change "MANAGER" to your app subtitle -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MANAGER"
+            android:textSize="24sp"
+            android:textColor="#626262"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:paddingBottom="16dp"
+            android:fontFamily="sans-serif-light" />
+
+        <!-- Song Counter Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#381400"
+            android:padding="16dp"
+            android:alpha="0.9"
+            android:gravity="center"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊 "
+                android:textSize="20sp" />
+
+            <!-- Song count display -->
+            <TextView
+                android:id="@+id/tvSongCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 / 4 songs"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- MAIN CONTENT AREA -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- ═══ CHANGEABLE: Tagline ═══ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Curate your perfect soundtrack"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#895937"
+            android:gravity="center"
+            android:alpha="0.9"
+            android:paddingBottom="32dp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.05" />
+
+        <!-- Button Container (Vertical LinearLayout) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFDDD"
+            android:gravity="center">
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Q.1.2 REQUIREMENT: BUTTON 1 - Add to Playlist (10 marks) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- ═══ CHANGEABLE: Button text ═══ -->
+            <!-- Change "ADD SONG" to "ADD MOVIE", "ADD BOOK", etc. -->
+            <Button
+                android:id="@+id/btnAddToPlaylist"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="➕  ADD SONG"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#381400"
+                android:elevation="8dp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Q.1.2 REQUIREMENT: BUTTON 2 - View Details (5 marks) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- ═══ CHANGEABLE: Button text ═══ -->
+            <Button
+                android:id="@+id/btnViewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="📊  VIEW DETAILS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#381400"
+                android:elevation="8dp"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <!-- Q.1.2 REQUIREMENT: BUTTON 3 - Exit App (5 marks) -->
+            <!-- ═══════════════════════════════════════════════════════════ -->
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="🚪  EXIT"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#381400"
+                android:elevation="8dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- BOTTOM FOOTER -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ Premium Edition ✨"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:background="#381400"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IMAD5112 • 2025"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:background="#381400"
+            android:paddingTop="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--
+        ════════════════════════════════════════════════════════════════════════════
+        ASSIGNMENT REQUIREMENT: LINEAR LAYOUT ✓
+        ════════════════════════════════════════════════════════════════════════════
+        This layout uses LinearLayout as required:
+        - Root element: <LinearLayout> with orientation="vertical"
+        - All sections use nested LinearLayouts
+        - No ConstraintLayout, RelativeLayout, or other layouts used
+
+        ════════════════════════════════════════════════════════════════════════════
+        CHANGEABLE SECTIONS FOR OTHER APPS:
+        ════════════════════════════════════════════════════════════════════════════
+
+        Line 43: Icon emoji "🎵" → Change to 🎬 📚 🍽️ 💪 etc.
+        Line 53: "MUSIC PLAYLIST" → Change to your app name
+        Line 66: "MANAGER" → Change to your subtitle
+        Line 120: "Curate your perfect soundtrack" → Change tagline
+        Line 141: "ADD SONG" → Change button text
+        Line 158: "VIEW DETAILS" → Can customize
+        Line 174: "EXIT" → Usually keep as is
+
+        ════════════════════════════════════════════════════════════════════════════
+    -->

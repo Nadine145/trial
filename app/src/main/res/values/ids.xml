@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnShowSongs" type="id" />
+    <item name="tvAverageRating" type="id" />
+    <item name="tvSongList" type="id" />
+    <item name="btnReturnToMain" type="id" />
+    <item name="btnCalculateAverage" type="id" />
+    <item name="tvDisplay" type="id" />
+    <item name="tvAverage" type="id" />
+    <item name="btnShowList" type="id" />
+    <item name="btnCalcAverage" type="id" />
+    <item name="btnBack" type="id" />
+    <item name="btnDisplaySongs" type="id" />
+    <item name="btnReturn" type="id" />
+    <item name="scrollView" type="id" />
+    <item name="ivSplashIcon" type="id" />
+    <item name="SplashIcon" type="id" />
+</resources>

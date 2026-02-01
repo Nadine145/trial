@@ -1,0 +1,66 @@
+<resources>
+    <!-- CHANGEABLE: Application name shown in device -->
+    <string name="app_name">Music Playlist Manager</string>
+
+    <!-- CHANGEABLE: Main Screen strings -->
+    <string name="main_title">🎵 Music Playlist Manager</string>
+    <string name="main_subtitle">Manage your favorite songs with ratings and comments</string>
+    <string name="btn_add">➕ Add Song to Playlist</string>
+    <string name="btn_view_details">📋 View Playlist Details</string>
+    <string name="btn_exit">🚪 Exit App</string>
+    <string name="footer_text">Created for IMAD5112 Assignment</string>
+
+    <!-- CHANGEABLE: Detailed View Screen strings -->
+    <string name="detailed_title">📊 Detailed Playlist View</string>
+    <string name="welcome_detailed_view">Welcome to Detailed View!\n\nUse the buttons below to:\n• Display all songs\n• Calculate average rating</string>
+    <string name="btn_show_songs">🎵 Display All Songs</string>
+    <string name="btn_calculate_average">⭐ Calculate Average Rating</string>
+    <string name="btn_back">⬅️ Back to Main Screen</string>
+
+    <!-- CHANGEABLE: Dialog strings -->
+    <string name="dialog_title_song">Enter Song Title</string>
+    <string name="dialog_title_artist">Enter Artist Name</string>
+    <string name="dialog_title_rating">Enter Rating (1-5)</string>
+    <string name="dialog_title_comments">Enter Comments</string>
+
+    <!-- CHANGEABLE: Messages -->
+    <string name="msg_success">Song added successfully!</string>
+    <string name="msg_playlist_full">Playlist is full! Maximum 4 songs allowed.</string>
+    <string name="msg_no_songs">No songs in playlist yet!</string>
+
+    <!-- CHANGEABLE: Error messages -->
+    <string name="error_empty_title">Song title cannot be empty</string>
+    <string name="error_empty_artist">Artist name cannot be empty</string>
+    <string name="error_empty_comments">Comments cannot be empty</string>
+    <string name="error_invalid_rating">Please enter a valid rating between 1 and 5</string>
+    <string name="image">📊</string>
+</resources>
+
+    <!--
+        CUSTOMIZATION INSTRUCTIONS:
+
+        To change the app concept, replace these strings:
+
+        FOR MOVIE TRACKER:
+        - app_name: "Movie Tracker"
+        - main_title: "Movie Collection"
+        - btn_add: "Add Movie"
+        - dialog_title_song: "Enter Movie Title"
+        - dialog_title_artist: "Enter Director Name"
+
+        FOR BOOK LIBRARY:
+        - app_name: "Book Library"
+        - main_title: "My Book Collection"
+        - btn_add: "Add Book"
+        - dialog_title_song: "Enter Book Title"
+        - dialog_title_artist: "Enter Author Name"
+
+        FOR RESTAURANT REVIEWS:
+        - app_name: "Restaurant Reviews"
+        - main_title: "Restaurant Tracker"
+        - btn_add: "Add Restaurant"
+        - dialog_title_song: "Enter Restaurant Name"
+        - dialog_title_artist: "Enter Cuisine Type"
+
+        Simply find and replace throughout this file!
+    -->

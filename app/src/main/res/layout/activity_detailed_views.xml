@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ════════════════════════════════════════════════════════════════════════════
+    DETAILED VIEW SCREEN LAYOUT (Q.1.3)
+    Uses LINEAR LAYOUT as required by assignment
+
+    This screen contains:
+    - Button 1: Display all songs (using loop)
+    - Button 2: Calculate average rating (using loop)
+    - Button 3: Return to main screen
+    - Display area for results
+    ════════════════════════════════════════════════════════════════════════════
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/my_image_9"
+    android:padding="0dp"
+    tools:context="DetailedViewsActivity">
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- TOP HEADER SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFDDD"
+        android:alpha="0.9"
+        android:padding="24dp"
+        android:elevation="8dp">
+
+        <!-- Icon -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp" />
+
+        <!-- ═══ CHANGEABLE: Screen Title ═══ -->
+        <!-- Change "PLAYLIST ANALYTICS" to match your app -->
+        <TextView
+            android:id="@+id/tvScreenTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PLAYLIST ANALYTICS"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detailed View"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.05" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- DISPLAY AREA (Shows results from button clicks) -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Display Card Container (LinearLayout) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#64291E"
+            android:elevation="12dp">
+
+            <!-- Card Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:background="#E8D9C0"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈"
+                    android:textSize="24sp"
+                    android:paddingEnd="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESULTS"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:letterSpacing="0.15"
+                    android:fontFamily="sans-serif-medium" />
+
+            </LinearLayout>
+
+            <!-- Scrollable Display Area -->
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="false">
+
+                <!-- Text display for results -->
+                <TextView
+                    android:id="@+id/tvDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Analytics!\n\n📊 Use the buttons below to:\n\n• Display all your songs\n• Calculate average rating\n\nYour results will appear here!"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:lineSpacingExtra="6dp"
+                    android:fontFamily="monospace"
+                    android:padding="8dp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!-- ACTION BUTTONS SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="0dp">
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- Q.1.3 REQUIREMENT: BUTTON 1 - Display Songs using Loop (10 marks) -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- ═══ CHANGEABLE: Button text ═══ -->
+        <!-- Change "DISPLAY SONGS" to "DISPLAY MOVIES", "DISPLAY BOOKS", etc. -->
+        <Button
+            android:id="@+id/btnShowSongs"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="🎵  DISPLAY SONGS"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#381400"
+            android:elevation="8dp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- Q.1.3 REQUIREMENT: BUTTON 2 - Calculate Average using Loop (10 marks) -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <Button
+            android:id="@+id/btnCalculateAverage"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="⭐  CALCULATE AVERAGE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#381400"
+            android:elevation="8dp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <!-- Q.1.3 REQUIREMENT: BUTTON 3 - Return to Main Screen (5 marks) -->
+        <!-- ═══════════════════════════════════════════════════════════════ -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="⬅️  BACK"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#381400"
+            android:elevation="8dp"
+            android:letterSpacing="0.1"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!--
+        ════════════════════════════════════════════════════════════════════════════
+        ASSIGNMENT REQUIREMENT: LINEAR LAYOUT ✓
+        ════════════════════════════════════════════════════════════════════════════
+        This layout uses LinearLayout as required:
+        - Root element: <LinearLayout> with orientation="vertical"
+        - All sections use nested LinearLayouts
+        - ScrollView contains the display area (allowed within LinearLayout)
+        - No ConstraintLayout, RelativeLayout, or other layouts used
+
+        ════════════════════════════════════════════════════════════════════════════
+        CHANGEABLE SECTIONS FOR OTHER APPS:
+        ════════════════════════════════════════════════════════════════════════════
+
+        Line 50: "PLAYLIST ANALYTICS" → "MOVIE ANALYTICS", "BOOK STATS", etc.
+        Line 172: "DISPLAY SONGS" → "DISPLAY MOVIES", "DISPLAY BOOKS", etc.
+        Line 188: "CALCULATE AVERAGE" → Can keep as is
+        Line 203: "BACK" → Usually keep as is
+
+        ════════════════════════════════════════════════════════════════════════════
+        HOW IT WORKS:
+        ════════════════════════════════════════════════════════════════════════════
+
+        1. User clicks "DISPLAY SONGS" button
+           → DetailedViewActivity.displayAllItems() runs
+           → Uses FOR LOOP to show all songs
+           → Results appear in tvDisplay TextView
+
+        2. User clicks "CALCULATE AVERAGE" button
+           → DetailedViewActivity.calculateAndDisplayAverage() runs
+           → Uses FOR LOOP to sum ratings
+           → Calculates average (sum ÷ count)
+           → Results appear in tvDisplay TextView
+
+        3. User clicks "BACK" button
+           → Activity closes
+           → Returns to MainActivity
+
+        ════════════════════════════════════════════════════════════════════════════
+    -->
