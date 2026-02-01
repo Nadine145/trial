@@ -42,7 +42,7 @@
         android:id="@+id/tvSplashAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MUSIC PLAYLIST🌟"
+        android:text="MUSIC PLAYLIST🌟👌"
         android:textSize="36sp"
         android:textStyle="bold"
         android:textColor="#FFDFDF"
